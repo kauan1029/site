@@ -25,39 +25,47 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 flex flex-col justify-center items-center px-6">
-      <div className="bg-white max-w-md w-full rounded-3xl shadow-2xl p-10 flex flex-col items-center">
-        <h1 className="text-4xl font-extrabold text-indigo-700 mb-6 tracking-wide select-none">
+    <div className="min-h-screen bg-gradient-to-b from-[#0f172a] to-[#020617] flex flex-col justify-center items-center px-6">
+      <div className="bg-gray-800 bg-opacity-90 max-w-md w-full rounded-2xl shadow-lg p-10 flex flex-col items-center">
+        <h1 className="text-4xl font-thin text-gray-200 mb-8 select-none tracking-wide">
           🔒 Acesso ao Transcript
         </h1>
-        <p className="text-gray-600 mb-8 text-center text-lg leading-relaxed">
-          Insira a senha que você recebeu no privado para acessar seu transcript.
+        <p className="text-gray-400 mb-8 text-center text-base leading-relaxed">
+          Digite a senha que você recebeu no privado para acessar seu transcript.
         </p>
 
         <input
           type="password"
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
-          placeholder="Digite sua senha"
-          className="w-full px-6 py-4 rounded-xl border border-indigo-300 focus:outline-none focus:ring-4 focus:ring-indigo-400 placeholder-indigo-300 text-lg transition"
+          placeholder="Sua senha"
+          className="w-full px-5 py-3 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
         />
 
         {erro && (
-          <p className="mt-3 text-red-500 text-sm font-medium select-none" role="alert">
+          <p className="mt-3 text-red-500 text-sm font-light select-none" role="alert">
             {erro}
           </p>
         )}
 
         <button
           onClick={verificarSenha}
-          className="mt-8 w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 active:translate-y-0"
+          className="mt-8 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out transform hover:-translate-y-0.5 active:translate-y-0"
         >
           Acessar
         </button>
       </div>
 
-      <footer className="mt-10 text-gray-400 text-sm select-none">
-        Desenvolvido por <a href="https://github.com/77lopesx" target="_blank" rel="noreferrer" className="underline hover:text-indigo-600">77lopesx</a>
+      <footer className="mt-10 text-gray-500 text-sm select-none">
+        Desenvolvido por{" "}
+        <a
+          href="https://github.com/77lopesx"
+          target="_blank"
+          rel="noreferrer"
+          className="underline hover:text-indigo-400"
+        >
+          77lopesx
+        </a>
       </footer>
     </div>
   );
